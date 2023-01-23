@@ -3,6 +3,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/Game.dir/apps/main.cpp.o.d"
   "CMakeFiles/Game.dir/src/Game.cpp.o"
   "CMakeFiles/Game.dir/src/Game.cpp.o.d"
+  "CMakeFiles/Game.dir/src/Map.cpp.o"
+  "CMakeFiles/Game.dir/src/Map.cpp.o.d"
+  "CMakeFiles/Game.dir/src/Object.cpp.o"
+  "CMakeFiles/Game.dir/src/Object.cpp.o.d"
+  "CMakeFiles/Game.dir/src/TextureManager.cpp.o"
+  "CMakeFiles/Game.dir/src/TextureManager.cpp.o.d"
   "Game"
   "Game.pdb"
 )

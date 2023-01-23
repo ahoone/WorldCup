@@ -1,6 +1,6 @@
-CMakeFiles/Game.dir/src/Game.cpp.o: \
-  /Users/noahbensoussen/Desktop/Projet\ CPP/src/Game.cpp \
-  /Users/noahbensoussen/Desktop/Projet\ CPP/include/Game.hpp \
+CMakeFiles/Game.dir/src/TextureManager.cpp.o: \
+  /Users/noahbensoussen/Desktop/Projet\ CPP/src/TextureManager.cpp \
+  /Users/noahbensoussen/Desktop/Projet\ CPP/include/TextureManager.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/include/pthread.h \
@@ -363,6 +363,4 @@ CMakeFiles/Game.dir/src/Game.cpp.o: \
   /usr/local/include/SDL2/SDL_version.h \
   /usr/local/include/SDL2/SDL_locale.h \
   /usr/local/include/SDL2/SDL_misc.h /usr/local/include/SDL2/SDL_image.h \
-  /Users/noahbensoussen/Desktop/Projet\ CPP/include/TextureManager.hpp \
-  /Users/noahbensoussen/Desktop/Projet\ CPP/include/Object.hpp \
-  /Users/noahbensoussen/Desktop/Projet\ CPP/include/Map.hpp
+  /Users/noahbensoussen/Desktop/Projet\ CPP/include/Game.hpp

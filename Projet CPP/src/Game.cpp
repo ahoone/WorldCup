@@ -1,7 +1,13 @@
 #include "Game.hpp"
+#include "TextureManager.hpp"
+#include "Object.hpp"
+#include "Map.hpp"
 
-SDL_Texture* playerTexture;
-SDL_Rect scrR, destR;
+Object* player;
+
+Map* map;
+
+SDL_Renderer* Game::renderer = nullptr;
 
 Game::Game()
 {}
@@ -42,11 +48,8 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		_running = true;
 		_count = 0;
 
-		//Test, display an image
-		SDL_Surface* tempSurface = SDL_LoadBMP("../assets/player.bmp");
-		std::cout << SDL_GetError() << std::endl;
-		playerTexture = SDL_CreateTextureFromSurface(renderer, tempSurface);
-		SDL_FreeSurface(tempSurface);
+		player = new Object("../assets/player.bmp", 0, 0);
+		map = new Map();
 	}
 }
 
@@ -67,11 +70,12 @@ void Game::event()
 
 void Game::update()
 {
-	_count++;
-	destR.h = 64;
-	destR.w = 64;
-
-	destR.x = _count;
+	player->update();
+	
+	// _count++;
+	// destR.h = 64;
+	// destR.w = 64;
+	// destR.x = _count;
 
 	//std::cout << _count << std::endl;
 }
@@ -79,7 +83,8 @@ void Game::update()
 void Game::render()
 {
 	SDL_RenderClear(renderer);
-	SDL_RenderCopy(renderer, playerTexture, NULL, &destR);
+	map->DrawMap();
+	player->render();
 	SDL_RenderPresent(renderer);
 }
 

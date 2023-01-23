@@ -4,7 +4,8 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
-class Game {
+class Game
+{
 
 public:
 	Game();
@@ -19,10 +20,11 @@ public:
 
 	bool running() {return _running;};
 
+	static SDL_Renderer* renderer;
+
 private:
 	int _count;
 	bool _running;
 	SDL_Window* window;
-	SDL_Renderer* renderer;
 
 };

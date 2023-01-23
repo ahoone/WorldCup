@@ -97,20 +97,68 @@ CMakeFiles/Game.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/src/Game.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/noahbensoussen/Desktop/Projet CPP/src/Game.cpp" -o CMakeFiles/Game.dir/src/Game.cpp.s
 
+CMakeFiles/Game.dir/src/TextureManager.cpp.o: CMakeFiles/Game.dir/flags.make
+CMakeFiles/Game.dir/src/TextureManager.cpp.o: /Users/noahbensoussen/Desktop/Projet\ CPP/src/TextureManager.cpp
+CMakeFiles/Game.dir/src/TextureManager.cpp.o: CMakeFiles/Game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/noahbensoussen/Desktop/Projet CPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Game.dir/src/TextureManager.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Game.dir/src/TextureManager.cpp.o -MF CMakeFiles/Game.dir/src/TextureManager.cpp.o.d -o CMakeFiles/Game.dir/src/TextureManager.cpp.o -c "/Users/noahbensoussen/Desktop/Projet CPP/src/TextureManager.cpp"
+
+CMakeFiles/Game.dir/src/TextureManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/src/TextureManager.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/noahbensoussen/Desktop/Projet CPP/src/TextureManager.cpp" > CMakeFiles/Game.dir/src/TextureManager.cpp.i
+
+CMakeFiles/Game.dir/src/TextureManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/src/TextureManager.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/noahbensoussen/Desktop/Projet CPP/src/TextureManager.cpp" -o CMakeFiles/Game.dir/src/TextureManager.cpp.s
+
+CMakeFiles/Game.dir/src/Object.cpp.o: CMakeFiles/Game.dir/flags.make
+CMakeFiles/Game.dir/src/Object.cpp.o: /Users/noahbensoussen/Desktop/Projet\ CPP/src/Object.cpp
+CMakeFiles/Game.dir/src/Object.cpp.o: CMakeFiles/Game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/noahbensoussen/Desktop/Projet CPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Game.dir/src/Object.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Game.dir/src/Object.cpp.o -MF CMakeFiles/Game.dir/src/Object.cpp.o.d -o CMakeFiles/Game.dir/src/Object.cpp.o -c "/Users/noahbensoussen/Desktop/Projet CPP/src/Object.cpp"
+
+CMakeFiles/Game.dir/src/Object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/src/Object.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/noahbensoussen/Desktop/Projet CPP/src/Object.cpp" > CMakeFiles/Game.dir/src/Object.cpp.i
+
+CMakeFiles/Game.dir/src/Object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/src/Object.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/noahbensoussen/Desktop/Projet CPP/src/Object.cpp" -o CMakeFiles/Game.dir/src/Object.cpp.s
+
+CMakeFiles/Game.dir/src/Map.cpp.o: CMakeFiles/Game.dir/flags.make
+CMakeFiles/Game.dir/src/Map.cpp.o: /Users/noahbensoussen/Desktop/Projet\ CPP/src/Map.cpp
+CMakeFiles/Game.dir/src/Map.cpp.o: CMakeFiles/Game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/noahbensoussen/Desktop/Projet CPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Game.dir/src/Map.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Game.dir/src/Map.cpp.o -MF CMakeFiles/Game.dir/src/Map.cpp.o.d -o CMakeFiles/Game.dir/src/Map.cpp.o -c "/Users/noahbensoussen/Desktop/Projet CPP/src/Map.cpp"
+
+CMakeFiles/Game.dir/src/Map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game.dir/src/Map.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/noahbensoussen/Desktop/Projet CPP/src/Map.cpp" > CMakeFiles/Game.dir/src/Map.cpp.i
+
+CMakeFiles/Game.dir/src/Map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game.dir/src/Map.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/noahbensoussen/Desktop/Projet CPP/src/Map.cpp" -o CMakeFiles/Game.dir/src/Map.cpp.s
+
 # Object files for target Game
 Game_OBJECTS = \
 "CMakeFiles/Game.dir/apps/main.cpp.o" \
-"CMakeFiles/Game.dir/src/Game.cpp.o"
+"CMakeFiles/Game.dir/src/Game.cpp.o" \
+"CMakeFiles/Game.dir/src/TextureManager.cpp.o" \
+"CMakeFiles/Game.dir/src/Object.cpp.o" \
+"CMakeFiles/Game.dir/src/Map.cpp.o"
 
 # External object files for target Game
 Game_EXTERNAL_OBJECTS =
 
 Game: CMakeFiles/Game.dir/apps/main.cpp.o
 Game: CMakeFiles/Game.dir/src/Game.cpp.o
+Game: CMakeFiles/Game.dir/src/TextureManager.cpp.o
+Game: CMakeFiles/Game.dir/src/Object.cpp.o
+Game: CMakeFiles/Game.dir/src/Map.cpp.o
 Game: CMakeFiles/Game.dir/build.make
 Game: /usr/local/lib/libSDL2.dylib
 Game: CMakeFiles/Game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/noahbensoussen/Desktop/Projet CPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/noahbensoussen/Desktop/Projet CPP/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
