@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/noahbensoussen/Desktop/Projet CPP/src/Map.cpp" "CMakeFiles/Game.dir/src/Map.cpp.o" "gcc" "CMakeFiles/Game.dir/src/Map.cpp.o.d"
   "/Users/noahbensoussen/Desktop/Projet CPP/src/Object.cpp" "CMakeFiles/Game.dir/src/Object.cpp.o" "gcc" "CMakeFiles/Game.dir/src/Object.cpp.o.d"
   "/Users/noahbensoussen/Desktop/Projet CPP/src/TextureManager.cpp" "CMakeFiles/Game.dir/src/TextureManager.cpp.o" "gcc" "CMakeFiles/Game.dir/src/TextureManager.cpp.o.d"
+  "/Users/noahbensoussen/Desktop/Projet CPP/src/Vector.cpp" "CMakeFiles/Game.dir/src/Vector.cpp.o" "gcc" "CMakeFiles/Game.dir/src/Vector.cpp.o.d"
   )
 
 # Targets to which this target links.

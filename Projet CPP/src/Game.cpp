@@ -5,7 +5,9 @@
 #include "ECS/Entity.hpp"
 #include "ECS/Component.hpp"
 #include "ECS/Sprite.hpp"
-#include "ECS/Position.hpp"
+#include "ECS/Transform.hpp"
+
+#include "Vector.hpp"
 
 
 Map* map;
@@ -59,7 +61,7 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
 		map = new Map();
 
-		player.addComponent<PositionComponent>(0, 0);
+		player.addComponent<TransformComponent>(0,0);
 		player.addComponent<SpriteComponent>("../assets/player.bmp");
 	}
 }
@@ -84,9 +86,13 @@ void Game::update()
 	manager.actualize();
 	manager.update();
 
-	if(player.getComponent<PositionComponent>().x() > 100) player.getComponent<SpriteComponent>().setText("../assets/enemy.bmp");
+	player.getComponent<TransformComponent>().position.Add(Vector(5,0));
 
-	//std::cout << player.getComponent<PositionComponent>().x() << "," << player.getComponent<PositionComponent>().y() << std::endl;
+	if(player.getComponent<TransformComponent>().position.x() > 200) player.getComponent<SpriteComponent>().setText("../assets/enemy.bmp");
+
+	//if(player.getComponent<TransformComponent>().x() > 100) player.getComponent<SpriteComponent>().setText("../assets/enemy.bmp");
+
+	//std::cout << player.getComponent<TransformComponent>().x() << "," << player.getComponent<TransformComponent>().y() << std::endl;
 }
 
 void Game::render()

@@ -66,7 +66,8 @@ public:
 	bool isAlive() const {return _alive; }
 	void destroy() {_alive = false; }
 
-	template <typename T> bool hasComponent() const {return _componentBitSet[getComponentTypeID<T>]; }
+	template <typename T>
+	bool hasComponent() const {return _componentBitSet[getComponentTypeID<T>]; }
 
 	template <typename T, typename... TArgs>
 	T& addComponent(TArgs&&... mArgs)
@@ -160,13 +161,3 @@ inline Entity& Manager::addEntity()
 	_entities.emplace_back(std::move(uPtr));
 	return *e;
 }
-
-
-
-
-
-
-
-
-
-

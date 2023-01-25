@@ -1,5 +1,5 @@
 #pragma once
 
 #include "Entity.hpp"
-#include "Position.hpp"
+#include "Transform.hpp"
 #include "Sprite.hpp"

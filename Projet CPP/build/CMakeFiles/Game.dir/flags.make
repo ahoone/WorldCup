@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I"/Users/noahbensoussen/Desktop/Projet CPP/include" -I/usr/local/include -isystem /usr/local/include/SDL2
 
-CXX_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -lSDL2 -lSDL2_image
+CXX_FLAGS =  -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wall -lSDL2 -lSDL2_image -std=gnu++11
 

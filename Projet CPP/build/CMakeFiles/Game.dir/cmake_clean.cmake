@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Game.dir/src/Object.cpp.o.d"
   "CMakeFiles/Game.dir/src/TextureManager.cpp.o"
   "CMakeFiles/Game.dir/src/TextureManager.cpp.o.d"
+  "CMakeFiles/Game.dir/src/Vector.cpp.o"
+  "CMakeFiles/Game.dir/src/Vector.cpp.o.d"
   "Game"
   "Game.pdb"
 )
