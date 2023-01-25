@@ -1,8 +1,9 @@
 g++ -Wall -o name name.cpp -lSDL2 -lSDL2_image
 
+LE DOSSIER BUILD DOIT ÊTRE VIDE AVANT TOUTE MANIPULATION
+
 Lancer cmake .. depuis le répertoire build
 puis lancer un make
-
 
 DANS LE FICHIER /apps/main.cpp
 NE JAMAIS PASSER L'ARGUMENT FULLSCREEN À TRUE SUR MACOS

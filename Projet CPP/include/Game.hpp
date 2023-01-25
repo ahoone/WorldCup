@@ -13,7 +13,7 @@ public:
 
 	void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
 	
-	void event();
+	void effect();
 	void update();
 	void render();
 	void clean();
@@ -21,6 +21,7 @@ public:
 	bool running() {return _running; };
 
 	static SDL_Renderer* renderer;
+	static SDL_Event event;
 
 private:
 	int _count;

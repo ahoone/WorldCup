@@ -9,10 +9,26 @@ class TransformComponent : public Component
 public:
 
 	Vector position;
+	Vector velocity;
+
+	int speed = 3;
 
 	TransformComponent() {setPos(0, 0); }
 	TransformComponent(float x, float y) {setPos(x, y); }
 	TransformComponent(int x, int y) {setPos(x, y); }
+
+	void update() override
+	{
+		//Not effective because apply mutliple times the speed to velocity
+		//position = velocity.Factor(speed);
+
+		position.x(position.x()+velocity.x()*speed);
+		position.y(position.y()+velocity.y()*speed);
+	}
+
+//****************
+//*** POSITION ***
+//****************
 
 	float x() {return position.x(); }
 	float y() {return position.y(); }
@@ -35,10 +51,18 @@ public:
 		position.y(y);
 	}
 
-	void update() override
+//****************
+//*** VELOCITY ***
+//****************
+
+	void init() override
 	{
-		position.Add(Vector(1,1));
+		velocity.x(0);
+		velocity.y(0);
 	}
+
+
+
 
 private:
 

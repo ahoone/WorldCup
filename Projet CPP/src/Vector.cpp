@@ -12,6 +12,22 @@ Vector::Vector(float x, float y)
 	_y = y;
 }
 
+Vector& Vector::Factor(const int i)
+{
+	_x *= (float)i;
+	_y *= (float)i;
+
+	return *this;
+}
+
+Vector& Vector::Factor(const float f)
+{
+	_x *= f;
+	_y *= f;
+
+	return *this;
+}
+
 Vector& Vector::Add(const Vector& vector)
 {
 	_x += vector._x;

@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 
 		frameStart = SDL_GetTicks();
 
-		game->event();
+		game->effect();
 		game->update();
 		game->render();
 
