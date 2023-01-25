@@ -7,3 +7,5 @@ puis lancer un make
 DANS LE FICHIER /apps/main.cpp
 NE JAMAIS PASSER L'ARGUMENT FULLSCREEN À TRUE SUR MACOS
 (si vous le faites, il faut faire CMD+Q pour quitter)
+
+Toutes les textures sont en 32x32 desginées à l'aide de GIMP.

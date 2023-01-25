@@ -3,8 +3,8 @@
 #include "TextureManager.hpp"
 
 int defaultMap[20][25] = {
-	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+	{0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+	{0,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -60,17 +60,17 @@ void Map::DrawMap()
 
 			switch(ref)
 			{
-			case 0:
-				TextureManager::Draw(_water, _src, _dest);
-				break;
-			case 1:
-				TextureManager::Draw(_grass, _src, _dest);
-				break;
-			case 2:
-				TextureManager::Draw(_dirt, _src, _dest);
-				break;
-			default:
-				break;
+				case 0:
+					TextureManager::Draw(_water, _src, _dest);
+					break;
+				case 1:
+					TextureManager::Draw(_grass, _src, _dest);
+					break;
+				case 2:
+					TextureManager::Draw(_dirt, _src, _dest);
+					break;
+				default:
+					break;
 			}
 
 		}

@@ -15,8 +15,8 @@ void Object::update()
 	_xpos++;
 	_ypos++;
 
-	_srcRect.h = 64;
-	_srcRect.w = 64;
+	_srcRect.h = 32;
+	_srcRect.w = 32;
 	_srcRect.x = 0;
 	_srcRect.y = 0;
 
