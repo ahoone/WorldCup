@@ -11,17 +11,30 @@ public:
 	Vector position;
 	Vector velocity;
 
+	int width = 32;
+	int height = 32;
+	int scale = 1;
+
 	int speed = 3;
 
-	TransformComponent() {setPos(0, 0); }
-	TransformComponent(float x, float y) {setPos(x, y); }
-	TransformComponent(int x, int y) {setPos(x, y); }
+	TransformComponent() {position.Zero(); }
+	TransformComponent(float x, float y) {setPos(x,y); }
+	TransformComponent(int x, int y) {setPos(x,y); }
+	TransformComponent(int s)
+	{
+		position.Zero();
+		scale = s;
+	}
+	TransformComponent(float x, float y, int w, int h, int s)
+	{
+		setPos(x,y);
+		width = w;
+		height = h;
+		scale = s;
+	}
 
 	void update() override
 	{
-		//Not effective because apply mutliple times the speed to velocity
-		//position = velocity.Factor(speed);
-
 		position.x(position.x()+velocity.x()*speed);
 		position.y(position.y()+velocity.y()*speed);
 	}
@@ -57,8 +70,7 @@ public:
 
 	void init() override
 	{
-		velocity.x(0);
-		velocity.y(0);
+		velocity.Zero();
 	}
 
 

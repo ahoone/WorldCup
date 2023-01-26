@@ -12,22 +12,6 @@ Vector::Vector(float x, float y)
 	_y = y;
 }
 
-Vector& Vector::Factor(const int i)
-{
-	_x *= (float)i;
-	_y *= (float)i;
-
-	return *this;
-}
-
-Vector& Vector::Factor(const float f)
-{
-	_x *= f;
-	_y *= f;
-
-	return *this;
-}
-
 Vector& Vector::Add(const Vector& vector)
 {
 	_x += vector._x;
@@ -98,6 +82,22 @@ Vector& Vector::operator*=(const Vector& vector)
 Vector& Vector::operator/=(const Vector& vector)
 {
 	return this->Div(vector);
+}
+
+Vector& Vector::operator*(const int& i)
+{
+	_x *= i;
+	_y *= i;
+
+	return *this;
+}
+
+Vector& Vector::Zero()
+{
+	_x = 0;
+	_y = 0;
+
+	return *this;
 }
 
 std::ostream& operator<<(std::ostream& stream, const Vector& vector)

@@ -18,9 +18,6 @@ public:
 	void x(int x) {_x = x; }
 	void y(int y) {_y = y; }
 
-	Vector& Factor(const int i);
-	Vector& Factor(const float f);
-
 	Vector& Add(const Vector& vector);
 	Vector& Sub(const Vector& vector);
 	Vector& Mul(const Vector& vector);
@@ -35,6 +32,9 @@ public:
 	Vector& operator-=(const Vector& vector);
 	Vector& operator*=(const Vector& vector);
 	Vector& operator/=(const Vector& vector);
+
+	Vector& operator*(const int& i);
+	Vector& Zero();
 
 	friend std::ostream& operator<<(std::ostream& stream, const Vector& vector);
 

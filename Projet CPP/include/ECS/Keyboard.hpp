@@ -5,7 +5,7 @@
 
 #include "../Game.hpp"
 #include "Entity.hpp"
-#include "Component.hpp"
+#include "Components.hpp"
 
 class Keyboard : public Component
 {
@@ -21,6 +21,7 @@ public:
 
 	void update() override
 	{
+
 		if(Game::event.type == SDL_KEYDOWN)
 		{
 			switch(Game::event.key.keysym.sym)
