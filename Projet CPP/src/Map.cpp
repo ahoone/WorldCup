@@ -3,7 +3,7 @@
 #include "TextureManager.hpp"
 
 int defaultMap[20][25] = {
-	{0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+	{0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,2,1,2,1,2,0,0,0,0},
 	{0,0,0,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
 	{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -27,6 +27,12 @@ int defaultMap[20][25] = {
 
 Map::Map()
 {
+
+	//**********************
+	//*** OLD MAP SYSTEM ***
+	//**********************
+
+	/*
 	_dirt = TextureManager::LoadTexture("../assets/dirt.bmp");
 	_grass = TextureManager::LoadTexture("../assets/grass.bmp");
 	_water = TextureManager::LoadTexture("../assets/water.bmp");
@@ -37,22 +43,39 @@ Map::Map()
 	_dest.x = _dest.y = 0;
 	_src.w = _dest.w = 32;
 	_src.h = _dest.h = 32;
+	*/
+
+	//**********************
+	//*** NEW MAP SYSTEM ***
+	//**********************
+
+	LoadMap(defaultMap);
+
 }
 
 Map::~Map()
 {
+
+	//**********************
+	//*** OLD MAP SYSTEM ***
+	//**********************
+
+	/*
 	SDL_DestroyTexture(_grass);
 	SDL_DestroyTexture(_water);
 	SDL_DestroyTexture(_dirt);
+	*/
+
 }
 
-void Map::LoadMap(int array[20][25])
+void Map::LoadMap(int array[SIZE_Y][SIZE_X])
 {
-	for(int i=0; i<20; i++)
-		for(int j=0; j<25; j++)
-			_map[i][j] = array[i][j];
+	for(int j=0; j<SIZE_Y; j++)
+		for(int i=0; i<SIZE_X; i++)
+			Game::AddTile(array[j][i], i*32, j*32);
 }
 
+/*
 void Map::DrawMap()
 {
 	int ref = 0;
@@ -82,3 +105,4 @@ void Map::DrawMap()
 
 		}
 }
+*/

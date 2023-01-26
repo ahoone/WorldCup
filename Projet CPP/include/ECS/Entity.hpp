@@ -11,28 +11,42 @@ class Component;
 
 class Entity;
 
+class Manager;
+
 //*****************
 //*** COMPONENT ***
 //*****************
 
 using ComponentID = std::size_t;
+using Group = std::size_t;
 
+/*
 inline ComponentID getComponentTypeID()
 {
 	static ComponentID lastID = 0;
+	return lastID++;
+}
+*/
+
+inline ComponentID getNewComponentTypeID()
+{
+	static ComponentID lastID = 0u;
 	return lastID++;
 }
 
 template <typename T> 
 inline ComponentID getComponentTypeID() noexcept
 {
-	static ComponentID typeID = getComponentTypeID();
+	static ComponentID typeID = getNewComponentTypeID();
 	return typeID;
 }
 
 constexpr std::size_t maxComponents = 32;
+constexpr std::size_t maxGroups = 32;
 
 using ComponentBitSet = std::bitset<maxComponents>;
+using GroupBitSet = std::bitset<maxGroups>;
+
 using ComponentArray = std::array<Component*, maxComponents>;
 
 class Component
@@ -66,6 +80,12 @@ public:
 	bool isAlive() const {return _alive; }
 	void destroy() {_alive = false; }
 
+	Entity(Manager& mManager) : _manager(mManager) {}
+
+	bool hasGroup(Group mGroup) {return _groupBitSet[mGroup]; }
+	void addGroup(Group mGroup);
+	void delGroup(Group mGroup) {_groupBitSet[mGroup] = false; }
+
 	template <typename T> 
 	bool hasComponent() const {return _componentBitSet[getComponentTypeID<T>()]; }
 
@@ -97,8 +117,11 @@ private:
 	bool _alive = true;
 	std::vector<std::unique_ptr<Component>> _components;
 
+	Manager& _manager;
+
 	ComponentArray _componentArray;
 	ComponentBitSet _componentBitSet;
+	GroupBitSet _groupBitSet;
 
 };
 
@@ -127,11 +150,15 @@ public:
 	void draw();
 	void actualize();
 
+	void AddToGroup(Entity* mEntity, Group mGroup);
+	std::vector<Entity*>& getGroup(Group mGroup);
+
 	Entity& addEntity();
 
 private:
 
 	std::vector<std::unique_ptr<Entity>> _entities;
+	std::array<std::vector<Entity*>, maxGroups> _groupedEntities;
 
 };
 
@@ -149,15 +176,40 @@ inline void Manager::draw()
 
 inline void Manager::actualize()
 {
+	for(auto i(0u); i<maxGroups; i++)
+	{
+		auto& v(_groupedEntities[i]);
+		v.erase(std::remove_if(std::begin(v), std::end(v), [i](Entity* mEntity)
+			{return !mEntity->isAlive() || !mEntity->hasGroup(i); }),
+			std::end(v));
+	}
+
 	_entities.erase(std::remove_if(std::begin(_entities), std::end(_entities), 
 		[](const std::unique_ptr<Entity> &mEntity) {return !mEntity->isAlive(); }), 
 		std::end(_entities));
 }
 
+inline void Manager::AddToGroup(Entity* mEntity, Group mGroup)
+{
+	_groupedEntities[mGroup].emplace_back(mEntity);
+}
+
+inline std::vector<Entity*>& Manager::getGroup(Group mGroup)
+{
+	return _groupedEntities[mGroup];
+}
+
 inline Entity& Manager::addEntity()
 {
-	Entity* e = new Entity();
+	Entity* e = new Entity(*this);
 	std::unique_ptr<Entity> uPtr {e};
 	_entities.emplace_back(std::move(uPtr));
 	return *e;
+}
+
+//Must be defined here, if no, class Manager is considered incomple.
+inline void Entity::addGroup(Group mGroup)
+{
+	_groupBitSet[mGroup] = true;
+	_manager.AddToGroup(this, mGroup);
 }

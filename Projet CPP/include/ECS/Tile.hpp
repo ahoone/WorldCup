@@ -31,7 +31,7 @@ public:
 		switch(tileID)
 		{
 		case 0:
-			path = "../assets/water.bmp";
+			path = "../assets/concrete.bmp";
 			break;
 		case 1:
 			path = "../assets/dirt.bmp";
