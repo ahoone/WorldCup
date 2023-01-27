@@ -7,6 +7,7 @@
 #include "ECS/Sprite.hpp"
 #include "ECS/Transform.hpp"
 #include "ECS/Collider.hpp"
+#include "ECS/MultiSprite.hpp"
 
 #include "Vector.hpp"
 #include "Collision.hpp"
@@ -101,13 +102,13 @@ void Game::initEntities()
 	//**************************
 
 	player1.addComponent<TransformComponent>(256, 384, 32, 32, 2);
-	player1.addComponent<SpriteComponent>("../assets/j1.bmp", 2, 500);
+	player1.addComponent<MultiSpriteComponent>("../assets/j1.bmp", 2, 500);
 	player1.addComponent<Keyboard>();
 	player1.addComponent<ColliderComponent>("player1");
 	player1.addGroup(groupPlayers);
 
 	player2.addComponent<TransformComponent>(768, 384, 32, 32, 2);
-	player2.addComponent<SpriteComponent>("../assets/j2.bmp", 2, 500);
+	player2.addComponent<MultiSpriteComponent>("../assets/j2.bmp", 2, 500);
 	player2.addComponent<Keyboard>();
 	player2.addComponent<ColliderComponent>("player2");
 	player2.addGroup(groupPlayers);
