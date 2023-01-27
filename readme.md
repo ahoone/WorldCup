@@ -14,6 +14,10 @@ Dans le fichier  `/apps/main.cpp`
 NE JAMAIS PASSER L'ARGUMENT `FULLSCREEN` À `True`  SUR MacOS
 (si vous le faites, il faut faire `Cmd+Q` pour quitter)
 
+SOUS VALGRIND:
+Des erreurs peuvent apparaître mais une bonne partie de ces erreurs sont dûes à des bugs internes à la SDL2 qui ne peuvent être corrigés.
+Le reste des fuites de mémoire reste très léger.
+
 ## Installations
 
 ### Installation de la librairie SDL2
