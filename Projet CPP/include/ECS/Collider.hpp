@@ -8,6 +8,7 @@
 #include "Components.hpp"
 #include "Transform.hpp"
 
+//Donne une Hitbox à l'entité
 class ColliderComponent : public Component
 {
 

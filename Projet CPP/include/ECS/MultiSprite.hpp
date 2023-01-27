@@ -19,6 +19,9 @@ public:
 		_animated = true;
 	}
 
+	//On réécrit par dessus le update
+	//de SpriteComponent en rajoutant
+	//le changement de frame.
 	void update() override
 	{
 		if(_animated)

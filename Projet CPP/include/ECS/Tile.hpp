@@ -8,6 +8,8 @@
 #include "Transform.hpp"
 #include "Sprite.hpp"
 
+//Composante de base de la map
+//On les mets dans un groupe particulier
 class TileComponent : public Component
 {
 

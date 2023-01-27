@@ -6,8 +6,7 @@
 #include "Entity.hpp"
 #include "../TextureManager.hpp"
 
-#define SIZE_PLAYER 32
-
+//Donne un visuel à l'entité
 class SpriteComponent : public Component
 {
 

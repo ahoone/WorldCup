@@ -8,6 +8,9 @@
 
 class ColliderComponent;
 
+//Donne accès à une méthode pour
+//vérifier que deux objets se touchent
+//ou non.
 class Collision
 {
 

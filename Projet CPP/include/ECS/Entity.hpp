@@ -47,12 +47,15 @@ using GroupBitSet = std::bitset<maxGroups>;
 
 using ComponentArray = std::array<Component*, maxComponents>;
 
+//Sert de base à tous les Component
 class Component
 {
 
 public:
 	Entity* entity;
 
+	//Fonctions virtuelles car
+	//redéfinies par chaque classe fille
 	virtual void init() {}
 	virtual void update() {}
 	virtual void draw() {}
@@ -80,6 +83,9 @@ public:
 
 	Entity(Manager& mManager) : _manager(mManager) {}
 
+	//Les entity d'un même groupe sont
+	//réunies pour qu'on puisse itérer
+	//dessus et faire les updates...
 	bool hasGroup(Group mGroup) {return _groupBitSet[mGroup]; }
 	void addGroup(Group mGroup);
 	void delGroup(Group mGroup) {_groupBitSet[mGroup] = false; }
@@ -117,6 +123,8 @@ private:
 
 	Manager& _manager;
 
+	//Sert à stocker les données des
+	//components possédés par l'entity.
 	ComponentArray _componentArray;
 	ComponentBitSet _componentBitSet;
 	GroupBitSet _groupBitSet;

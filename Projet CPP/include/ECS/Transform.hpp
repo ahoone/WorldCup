@@ -3,6 +3,9 @@
 #include "Entity.hpp"
 #include "../Vector.hpp"
 
+//Composante de base de toute entité
+//Donne une position et une vitesse à
+//l'entité.
 class TransformComponent : public Component
 {
 

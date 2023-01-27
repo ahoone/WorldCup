@@ -5,6 +5,7 @@
 int main(int argc, char const *argv[])
 {
 
+	//Réglage FPS
 	const int FPS = 60;
 	const int frameDelay = 1000/FPS;
 
@@ -17,6 +18,7 @@ int main(int argc, char const *argv[])
 
 	game->init("WorldCup", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1024, 768, false);
 
+	//Boucle de jeu
 	while(game->running()) {
 
 		frameStart = SDL_GetTicks();

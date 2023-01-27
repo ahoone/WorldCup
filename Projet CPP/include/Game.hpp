@@ -15,10 +15,18 @@ public:
 	Game();
 	~Game();
 
+	//**********************
+	//*** INITIALISATION ***
+	//**********************
+
 	void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
 	void initEntities();
 	void placeWall();
 	void placeGoal();
+
+	//*********************
+	//*** BOUCLE DE JEU ***
+	//*********************
 	
 	void effect();
 	void update();
@@ -26,6 +34,10 @@ public:
 	void clean();
 
 	bool running() {return _running; };
+
+	//******************************
+	//*** GÉRER LES INTERACTIONS ***
+	//******************************
 
 	static void AddTile(int id, int x, int y);
 	static SDL_Renderer* renderer;

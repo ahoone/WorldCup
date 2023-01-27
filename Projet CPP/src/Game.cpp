@@ -12,7 +12,9 @@
 #include "Vector.hpp"
 #include "Collision.hpp"
 
-//==================================================
+//====================================
+//=== DÉCLARATION COMPOSANTES JEUX ===
+//====================================
 
 Map* map;
 
@@ -45,7 +47,7 @@ enum groupLabels : std::size_t
 	groupColliders
 };
 
-//==================================================
+//====================================
 
 Game::Game()
 {}
@@ -53,6 +55,8 @@ Game::Game()
 Game::~Game()
 {}
 
+
+//Initialise la SDL et les variables des composantes
 void Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
 	int flags = 0;
