@@ -87,9 +87,14 @@ sudo apt-get install cmake
 
 ## Lancer le jeu
 
+```sh
+mkdir build
+cd build
+```
+
 ATTENTION : LE DOSSIER `build` DOIT ÊTRE VIDE AVANT TOUTE MANIPULATION
 
-Dans le répertoire `\ProjetCPP\build`lancer:
+Dans le répertoire `\ProjetCPP\build` lancer:
 ```sh
 cmake ..
 make
@@ -98,3 +103,5 @@ Exécution:
 ```sh
 ./Game
 ```
+
+Pour quitter le mini-jeu il suffit de fermer la fenêtre.
