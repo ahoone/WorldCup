@@ -99,6 +99,8 @@ Dans le répertoire `\ProjetCPP\build` lancer:
 cmake ..
 make
 ```
+(cmake génère également une règle `clean`)
+
 Exécution:
 ```sh
 ./Game
