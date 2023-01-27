@@ -20,13 +20,11 @@ class Manager;
 using ComponentID = std::size_t;
 using Group = std::size_t;
 
-/*
 inline ComponentID getComponentTypeID()
 {
-	static ComponentID lastID = 0;
+	static ComponentID lastID = 0u;
 	return lastID++;
 }
-*/
 
 inline ComponentID getNewComponentTypeID()
 {

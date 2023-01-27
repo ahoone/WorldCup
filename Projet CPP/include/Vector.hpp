@@ -9,6 +9,8 @@ public:
 	Vector();
 	Vector(float x, float y);
 
+	Vector& operator=(const Vector& vector);
+
 	float x() {return _x; }
 	float y() {return _y; }
 
@@ -33,8 +35,12 @@ public:
 	Vector& operator*=(const Vector& vector);
 	Vector& operator/=(const Vector& vector);
 
+	Vector& operator*(const float& i);
 	Vector& operator*(const int& i);
 	Vector& Zero();
+
+	Vector& OpposeX();
+	Vector& OpposeY();
 
 	friend std::ostream& operator<<(std::ostream& stream, const Vector& vector);
 

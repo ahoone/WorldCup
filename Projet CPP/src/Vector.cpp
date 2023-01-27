@@ -12,6 +12,14 @@ Vector::Vector(float x, float y)
 	_y = y;
 }
 
+Vector& Vector::operator=(const Vector& vector)
+{
+	_x = vector._x;
+	_y = vector._y;
+
+	return *this;
+}
+
 Vector& Vector::Add(const Vector& vector)
 {
 	_x += vector._x;
@@ -84,6 +92,14 @@ Vector& Vector::operator/=(const Vector& vector)
 	return this->Div(vector);
 }
 
+Vector& Vector::operator*(const float& i)
+{
+	_x = static_cast<int>(_x * i);
+	_y = static_cast<int>(_y * i);
+
+	return *this;
+}
+
 Vector& Vector::operator*(const int& i)
 {
 	_x *= i;
@@ -96,6 +112,20 @@ Vector& Vector::Zero()
 {
 	_x = 0;
 	_y = 0;
+
+	return *this;
+}
+
+Vector& Vector::OpposeX()
+{
+	_x = -_x;
+
+	return *this;
+}
+
+Vector& Vector::OpposeY()
+{
+	_y = -_y;
 
 	return *this;
 }

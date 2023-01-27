@@ -6,8 +6,8 @@
 #include <fstream>
 #include <iostream>
 
-#define SIZE_X 25
-#define SIZE_Y 20
+#define SIZE_X 32
+#define SIZE_Y 24
 
 class Map
 {
